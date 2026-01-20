@@ -230,12 +230,13 @@ def main():
     with open(args.out, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
-    print("✅ metrics.txt yazıldı:")
+    print("metrics.txt yazıldı:")
     print(f"➡ {args.out}")
     if args.per_run_dir:
-        print("✅ per-run metrics yazıldı:")
+        print("per-run metrics yazıldı:")
         print(f"➡ {args.per_run_dir}")
 
 
 if __name__ == "__main__":
     main()
+
