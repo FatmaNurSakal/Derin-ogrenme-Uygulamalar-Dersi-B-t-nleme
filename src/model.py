@@ -87,7 +87,7 @@ def build_model(model_name: str, num_classes: int = 10) -> nn.Module:
         net.fc = nn.Linear(net.fc.in_features, num_classes)
         return net
 
-    # ✅ timm modelleri
+    # timm modelleri
     if m in ["vit_tiny", "vit-tiny"]:
         # timm adı: vit_tiny_patch16_224
         return timm.create_model("vit_tiny_patch16_224", pretrained=False, num_classes=num_classes)
@@ -98,3 +98,4 @@ def build_model(model_name: str, num_classes: int = 10) -> nn.Module:
     raise ValueError(
         f"Unknown model_name={model_name}. Options: simplecnn, customcnn, resnet18, vit_tiny, convnext_tiny"
     )
+
