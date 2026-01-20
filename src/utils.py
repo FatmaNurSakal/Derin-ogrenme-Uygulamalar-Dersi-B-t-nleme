@@ -73,7 +73,7 @@ def get_cifar10_loaders(
     use_augmentation: bool = True,
     img_size: int = 224,
 ) -> Tuple[DataLoader, DataLoader]:
-    # ✅ Aynı şart: herkes 224x224 görür (CIFAR-10 32x32 -> Resize)
+    # Aynı şart: herkes 224x224 görür (CIFAR-10 32x32 -> Resize)
     # Aug ON: RandomResizedCrop + HFlip (tüm modeller için ortak)
     if use_augmentation:
         train_tf = transforms.Compose([
@@ -118,3 +118,4 @@ def accuracy_top1(logits: torch.Tensor, y: torch.Tensor) -> float:
 def save_checkpoint(path: str, state: Dict):
     ensure_dir(os.path.dirname(path))
     torch.save(state, path)
+
