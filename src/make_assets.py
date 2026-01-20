@@ -80,7 +80,7 @@ def _bar_chart(values, labels, title, out_path, y_label="test accuracy"):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--epochs", type=int, default=3)     # ✅ deneme için
+    parser.add_argument("--epochs", type=int, default=3)     # deneme için
     parser.add_argument("--seed_base", type=int, default=42)
     parser.add_argument("--img_size", type=int, default=224)
     args = parser.parse_args()
@@ -88,7 +88,7 @@ def main():
     out_assets = "results/presentation_assets"
     ensure_dir(out_assets)
 
-    # ✅ karşılaştırılacak 5 model (Aug ON)
+    # karşılaştırılacak 5 model (Aug ON)
     models = [
         ("simplecnn", "SimpleCNN"),
         ("customcnn", "CustomCNN"),
@@ -115,7 +115,7 @@ def main():
         model_accs.append(float(acc))
         model_labels.append(label)
 
-    # ✅ tek grafikte hepsini karşılaştır
+    # tek grafikte hepsini karşılaştır
     _bar_chart(
         model_accs,
         model_labels,
@@ -145,7 +145,7 @@ def main():
         y_label="test accuracy"
     )
 
-    print("\n✅ SUNUM PNG'leri üretildi:")
+    print("\nSUNUM PNG'leri üretildi:")
     print(f"➡ {out_assets}")
     for fn in sorted(os.listdir(out_assets)):
         print(" -", fn)
@@ -153,3 +153,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
