@@ -58,7 +58,7 @@ def main():
     data_dir = cfg.get("data_dir", "data")
     img_size = int(cfg.get("img_size", 224))
 
-    # ✅ test loader: augmentation kapalı, img_size aynı
+    # test loader: augmentation kapalı, img_size aynı
     _, test_loader = get_cifar10_loaders(
         data_dir,
         batch_size=args.batch,
@@ -80,7 +80,7 @@ def main():
     y_pred = np.concatenate(all_p)
 
     acc = float((y_true == y_pred).mean())
-    print(f"✅ Test Accuracy: {acc:.4f}")
+    print(f"Test Accuracy: {acc:.4f}")
 
     out_dir = args.out_dir or os.path.dirname(os.path.dirname(args.ckpt))
     fig_dir = os.path.join(out_dir, "figures")
@@ -100,3 +100,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
