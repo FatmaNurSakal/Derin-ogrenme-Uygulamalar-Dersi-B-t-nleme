@@ -182,7 +182,7 @@ def main():
                  os.path.join(args.out_dir, "bar_roc_auc_from_txt.png"),
                  "ROC-AUC (OVR, Macro) Comparison (from metrics.txt)", "roc-auc (ovr, macro)")
 
-    print("✅ PNG'ler metrics.txt üzerinden üretildi (NO retraining):")
+    print("PNG'ler metrics.txt üzerinden üretildi (NO retraining):")
     print(f"metrics.txt: {args.metrics_txt}")
     print(f"out_dir: {args.out_dir}")
     print(" - metrics_table_from_txt.png")
@@ -195,3 +195,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
