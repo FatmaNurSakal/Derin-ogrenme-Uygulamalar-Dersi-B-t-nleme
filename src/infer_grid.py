@@ -145,9 +145,10 @@ def main():
         title=f"{model_name} | {img_size}x{img_size} | Correct:{len(correct_idx)} + Wrong:{len(wrong_idx)}"
     )
 
-    print("✅ Inference grid saved:")
+    print("Inference grid saved:")
     print(f"➡ {out_path}")
 
 
 if __name__ == "__main__":
     main()
+
